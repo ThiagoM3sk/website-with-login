@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website com Loin e Registro</title>
+    <title>Website com Login e Registro</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
     <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/menustyle.css">
 </head>
 <body>
     <header>
@@ -16,6 +18,16 @@
             <a href="#">Serviços</a>
             <a href="#">Contato</a>
             <button class="btnLogin-popup">Login</button>
+            <div class="toggle_btn">
+                <i class="fa-regular fa-bars"></i>
+            </div>
+        </nav>
+        <nav class="dropdown_menu">
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Serviços</a></li>
+            <li><a href="#">Contato</a></li>
+            <li><button class="btnLogin-popup">Login</button></li>
         </nav>
     </header>
 
@@ -77,6 +89,7 @@
     </div>
 
     <script src="script/script.js"></script>
+    <script src="script/menuscript.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>

@@ -1,0 +1,101 @@
+.navigation .toggle_btn{
+color: #fff;
+font-size: 1.5em;
+cursor: pointer;
+display: none;
+}
+
+.dropdown_menu{
+display: none;
+position: absolute;
+right: 2rem;
+top: 60px;
+width: 300px;
+height: 0;
+background: rgba(255, 255, 255, 0.1);
+backdrop-filter: blur(15px);
+border-radius: 10px;
+overflow: hidden;
+transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open{
+height: 300px;
+}
+
+.dropdown_menu a{
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.dropdown_menu a::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+}
+
+.dropdown_menu a:hover::after{
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.dropdown_menu li{
+padding: 0.7rem;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.dropdown_menu .btnLogin-popup{
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+    width: 100%;
+}
+
+.dropdown_menu .btnLogin-popup:hover{
+    background: #fff;
+    color: #162938;
+}
+
+@media(max-width: 992px){
+.navigation a,
+.navigation .btnLogin-popup{
+    display: none;
+}
+
+.navigation .toggle_btn{
+    display: block;
+}
+
+.dropdown_menu{
+    display: block;
+}
+}
+
+@media(max-width: 576px){
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+}
