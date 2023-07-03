@@ -1,3 +1,5 @@
+import { toggleBtn, toggleIcon, dropDownMenu, isOpen } from './menuscript.js'
+
 const wrapper = document.querySelector('.wrapper')
 const loginLink = document.querySelector('.login-link')
 const registerLink = document.querySelector('.register-link')
@@ -14,8 +16,10 @@ loginLink.addEventListener('click', ()=> {
 
 btnPopup.addEventListener('click', ()=> {
     wrapper.classList.add('active-popup')
+    dropDownMenu.add('active-popup')
 })
 
 iconClose.addEventListener('click', ()=> {
     wrapper.classList.remove('active-popup')
+    dropDownM('active-popup')
 })
